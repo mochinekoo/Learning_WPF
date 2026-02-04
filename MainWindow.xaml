@@ -7,7 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Menu>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
             <MenuItem Header="ファイル">
                 <MenuItem Header="新規作成" />
                 <MenuItem Header="開く" />
@@ -18,5 +23,8 @@
                 <MenuItem Header="このアプリについて"/>
             </MenuItem>
         </Menu>
+
+        <ScrollBar HorizontalAlignment="Right" Grid.Row="1">
+        </ScrollBar>
     </Grid>
 </Window>
