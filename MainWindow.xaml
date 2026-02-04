@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Menu>
+            <MenuItem Header="ファイル">
+                <MenuItem Header="新規作成" />
+                <MenuItem Header="開く" />
+                <MenuItem Header="保存" />
+                <MenuItem Header="終了" />
+            </MenuItem>
+            <MenuItem Header="ヘルプ">
+                <MenuItem Header="このアプリについて"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>
