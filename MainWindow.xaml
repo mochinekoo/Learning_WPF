@@ -7,12 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Menu Grid.Row="0">
+        <Menu Grid.Row="0" Grid.ColumnSpan="2">
             <MenuItem Header="ファイル">
                 <MenuItem Header="新規作成" />
                 <MenuItem Header="開く" />
@@ -24,7 +29,11 @@
             </MenuItem>
         </Menu>
 
-        <ScrollBar HorizontalAlignment="Right" Grid.Row="1">
+        <Button Content="ああ" Grid.Row="1" Grid.Column="0" Width="100" Height="100" FontFamily="Arial Black">
+            
+        </Button>
+
+        <ScrollBar HorizontalAlignment="Right" Grid.Row="1" Grid.Column="1">
         </ScrollBar>
     </Grid>
 </Window>
