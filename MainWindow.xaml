@@ -33,7 +33,11 @@
             
         </Button>
 
+        <Slider HorizontalAlignment="Left" Margin="37,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Value="{Binding Slider}" Minimum="0" Maximum="100"/>
+
         <ScrollBar HorizontalAlignment="Right" Grid.Row="1" Grid.Column="1">
         </ScrollBar>
+        <TextBox HorizontalAlignment="Left" Margin="179,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Slider}" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>
