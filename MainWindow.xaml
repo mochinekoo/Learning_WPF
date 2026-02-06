@@ -29,8 +29,8 @@
             </MenuItem>
         </Menu>
 
-        <Button Content="ああ" Grid.Row="1" Grid.Column="0" Width="100" Height="100" FontFamily="Arial Black">
-            
+        <Button Content="ああ" Grid.Row="1" Grid.Column="0" Width="100" Height="100" FontFamily="Arial Black" Command="{Binding ButtonListener.ButtonClickCommand}">
+
         </Button>
 
         <Slider HorizontalAlignment="Left" Margin="37,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Value="{Binding Slider}" Minimum="0" Maximum="100"/>
@@ -39,6 +39,7 @@
         </ScrollBar>
         <TextBox HorizontalAlignment="Left" Margin="179,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Slider}" VerticalAlignment="Top" Width="120"/>
         <ProgressBar HorizontalAlignment="Left" Height="10" Margin="73,298,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Value="{Binding Progress}"/>
+        <WebBrowser Grid.Row="1" Margin="517,0,0,270" local:WebBrowserUtil.BindableSource="{Binding Browser}"/>
 
     </Grid>
 </Window>

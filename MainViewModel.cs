@@ -8,7 +8,13 @@ namespace Learning_WPF {
     internal class MainViewModel : INotifyPropertyChanged {
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public MainViewModel() { }
+        public MainViewModel() {
+            ButtonListener = new ButtonListener(this);
+        }
+
+        public ButtonListener ButtonListener {
+            get; set;
+        }
 
         private int slider_;
         public int Slider {
@@ -22,12 +28,20 @@ namespace Learning_WPF {
         }
 
         private double progress_;
-
         public double Progress {
             get => progress_;
             set {
                 progress_ = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Progress)));
+            }
+        }
+
+        private string browser_;
+        public string Browser {
+            get => browser_;
+            set {
+                browser_ = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Browser)));
             }
         }
     }
