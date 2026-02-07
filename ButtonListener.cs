@@ -21,6 +21,9 @@ namespace Learning_WPF
             openFileDialog.Filter = "画像ファイル (*.png)|*.png";
             if (openFileDialog.ShowDialog() == true) {
                 mainViewModel_.Browser = openFileDialog.FileName;
+
+                var subWindow = new Window1();
+                subWindow.Show();
             }
         }
     }
